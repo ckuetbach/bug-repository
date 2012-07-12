@@ -30,16 +30,6 @@
 			<name>Christian Kütbach</name>
 			<email>christian.kuetbach@d-velop.de</email>
 		</developer>
-		<developer>
-			<id>chem</id>
-			<name>Christian Hemker	</name>
-			<email>christian.hemker@d-velop.de</email>
-		</developer>
-		<developer>
-			<id>dkur</id>
-			<name>Daniel Kurka</name>
-			<email>daniel.kurka@d-velop.de</email>
-		</developer>
 	</developers>
 
 	<build>
