@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src/main/java"/>
+	<classpathentry kind="var" path="M2_REPO/commons-io/commons-io/2.0.1/commons-io-2.0.1.jar" sourcepath="M2_REPO/commons-io/commons-io/2.0.1/commons-io-2.0.1-sources.jar"/>
+	<classpathentry kind="var" path="M2_REPO/com/googlecode/gwtphonegap/gwtphonegap/1.8.1.0/gwtphonegap-1.8.1.0.jar" sourcepath="M2_REPO/com/googlecode/gwtphonegap/gwtphonegap/1.8.1.0/gwtphonegap-1.8.1.0-sources.jar"/>
+	<classpathentry kind="var" path="M2_REPO/org/json/json/20090211/json-20090211.jar"/>
+	<classpathentry kind="var" path="M2_REPO/junit/junit/4.7/junit-4.7.jar" sourcepath="M2_REPO/junit/junit/4.7/junit-4.7-sources.jar"/>
+	<classpathentry kind="var" path="M2_REPO/com/googlecode/mgwt/mgwt/1.1.2-SNAPSHOT/mgwt-1.1.2-SNAPSHOT.jar" sourcepath="M2_REPO/com/googlecode/mgwt/mgwt/1.1.2-SNAPSHOT/mgwt-1.1.2-SNAPSHOT-sources.jar"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="con" path="com.google.gwt.eclipse.core.GWT_CONTAINER"/>
+	<classpathentry kind="output" path="war/WEB-INF/classes"/>
+</classpath>

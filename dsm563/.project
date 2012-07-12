@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectDescription>
+	<name>dsm563</name>
+	<comment>Dieses POM ist das Basis POM für alle Java-basierten
+		Projekte der d.velop AG. Zur Vereinheitlichung der Java Projekte
+		müssen diese immer direkt oder indirekt von diesem POM erben. NO_M2ECLIPSE_SUPPORT: Project files created with the maven-eclipse-plugin are not supported in M2Eclipse.</comment>
+	<projects>
+	</projects>
+	<buildSpec>
+		<buildCommand>
+			<name>org.eclipse.jdt.core.javabuilder</name>
+			<arguments>
+			</arguments>
+		</buildCommand>
+		<buildCommand>
+			<name>com.google.gdt.eclipse.core.webAppProjectValidator</name>
+			<arguments>
+			</arguments>
+		</buildCommand>
+		<buildCommand>
+			<name>com.google.gwt.eclipse.core.gwtProjectValidator</name>
+			<arguments>
+			</arguments>
+		</buildCommand>
+	</buildSpec>
+	<natures>
+		<nature>org.eclipse.jdt.core.javanature</nature>
+		<nature>com.google.gdt.eclipse.core.webAppNature</nature>
+		<nature>com.google.gwt.eclipse.core.gwtNature</nature>
+	</natures>
+	<linkedResources>
+		<link>
+			<name>war</name>
+			<type>2</type>
+			<location>/Users/ckue/Documents/workspace/DSM-563/target/dsm563-1.0-SNAPSHOT</location>
+		</link>
+	</linkedResources>
+</projectDescription>
