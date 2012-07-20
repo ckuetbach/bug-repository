@@ -31,24 +31,24 @@ import java.util.logging.Logger;
 import com.google.gwt.core.client.EntryPoint;
 import com.google.gwt.core.client.GWT;
 import com.google.gwt.core.client.Scheduler;
+import com.google.gwt.event.logical.shared.ValueChangeEvent;
+import com.google.gwt.event.logical.shared.ValueChangeHandler;
 import com.google.gwt.user.client.Window;
 import com.google.gwt.user.client.ui.RootPanel;
 import com.googlecode.mgwt.ui.client.MGWT;
 import com.googlecode.mgwt.ui.client.MGWTSettings;
 import com.googlecode.mgwt.ui.client.MGWTSettings.ViewPort;
 import com.googlecode.mgwt.ui.client.MGWTSettings.ViewPort.DENSITY;
-import com.googlecode.mgwt.ui.client.widget.LayoutPanel;
-import com.googlecode.mgwt.ui.client.widget.MSearchBox;
-import com.googlecode.mgwt.ui.client.widget.ScrollPanel;
+import com.googlecode.mgwt.ui.client.widget.MSlider;
 
 /**
  * @author ckue
  *
  */
-public class InputBugEntryPoint implements EntryPoint {
+public class MSliderentryPoint implements EntryPoint {
 
 	private static final int MAX = 2;
-	Logger log = Logger.getLogger(InputBugEntryPoint.class.getName());
+	Logger log = Logger.getLogger(MSliderentryPoint.class.getName());
 
 	@Override
 	public void onModuleLoad() {
@@ -121,19 +121,23 @@ public class InputBugEntryPoint implements EntryPoint {
 		mGWTSettings.setPreventScrolling(true);
 		MGWT.applySettings(mGWTSettings);
 
-		//AnimatableDisplay display = GWT.create(AnimatableDisplay.class);
 
-		LayoutPanel main = new LayoutPanel();
-		ScrollPanel scroller = new ScrollPanel();
-		scroller.setScrollingEnabledX(false);
-		MSearchBox searchBox = new MSearchBox();
-		searchBox.setValue("test");
-		scroller.add(searchBox);
-		main.add(scroller);
-		//display.setFirstWidget(main);
-		//main.add(searchBox);
-		RootPanel.get().add(main);
+		MSlider slider = new MSlider();
+		slider.setMax(MAX); // (Values: 0 ... MAX-1)
+		slider.setValue(MAX - 1); // MAX-1 -> Slider at most right position
 
+		slider.addValueChangeHandler(new ValueChangeHandler<Integer>() {
+
+			@Override
+			public void onValueChange(ValueChangeEvent<Integer> event) {
+				log.info("value: " + event.getValue());
+				if (event.getValue() == MAX) {
+					Window.alert("Value == MAX");
+				}
+			}
+		});
+
+		RootPanel.get().add(slider);
 
 	}
 
